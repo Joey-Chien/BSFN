@@ -18,6 +18,6 @@ python DOF_test.py
 ## To Re-produce:
 For the reproduction, please complete the following steps:
 
-1. Download BISD (Bokeh image scoring dataset).
+1. Download BISD (Bokeh image scoring dataset link: https://drive.google.com/drive/folders/1uQuI6V46VWWaJkxOT59mEdxfqJ6xKdUj?usp=sharing).
 2. Use Q-Align as the pretrained model for mPLUG-Owl2, and record the points.
 3. Start training the model.
