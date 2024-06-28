@@ -21,3 +21,13 @@ For the reproduction, please complete the following steps:
 1. Download BISD (Bokeh image scoring dataset link: https://drive.google.com/file/d/1p58WboaopxAcIUI_bUgrVPW-Eb7zq8nY/view?usp=sharing).
 2. Use Q-Align as the pretrained model for mPLUG-Owl2, and record the points.
 3. Start training the model.
+
+## Model Weight and Dataset
+(Uploading to google cloud)
+DOF model weight: 
+BAID model weight:
+AVA model weight:
+
+BISD: https://drive.google.com/file/d/1p58WboaopxAcIUI_bUgrVPW-Eb7zq8nY/view?usp=sharing
+BAID:
+AVA:

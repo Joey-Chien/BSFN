@@ -79,7 +79,7 @@ def test(args, test_epoch):
             acc_correct += 1
             # print(a, a_sorted_keys)
             # print(b, b_sorted_keys)
-    print('Acc_correct: ', acc_correct / (len(scores)//3) )
+    print('Group_Acc: ', acc_correct / (len(scores)//3) )
 
         
 
@@ -108,6 +108,6 @@ if __name__ == '__main__':
         prcc.append(temp_prcc)
         acc.append(temp_acc)
         acc_correct.append(temp_acc_correct)
-        result = {'srcc':srcc, 'prcc':prcc, 'acc':acc, 'correct_pair':acc_correct}
+        result = {'srcc':srcc, 'prcc':prcc, 'acc':acc, 'Group_Acc':acc_correct}
         result_csv = pd.DataFrame(result)
         result_csv.to_csv('result/DOF_output.csv')
