@@ -1,6 +1,6 @@
 import os
 import scipy.stats
-from AVA_data import BBDataset
+from AVA_data import imageDataset
 from torch.utils.data import DataLoader
 from models.model import BSFN_AVA
 import torch.nn as nn
@@ -12,7 +12,7 @@ import pandas as pd
 import scipy
 from tqdm import tqdm
 
-test_dataset = BBDataset(file_dir='dataset/AVA_dataset', type='test', test=True, images_dir='/local/joey/images')
+test_dataset = imageDataset(file_dir='dataset/AVA_dataset', type='test', test=True, images_dir='/local/joey/images')
 
 def parse_args():
     parser = argparse.ArgumentParser()

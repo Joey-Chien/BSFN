@@ -1,6 +1,6 @@
 import os
 import scipy.stats
-from DOF_data import BBDataset
+from DOF_data import imageDataset
 from torch.utils.data import DataLoader
 from models.model import BSFN, BSFN_AVA
 import torch.nn as nn
@@ -12,7 +12,7 @@ import pandas as pd
 import scipy
 from tqdm import tqdm
 
-test_dataset = BBDataset(file_dir='dataset/DOF_dataset', type='test', test=True, images_dir='/home/joey/BAID/DOF/bokeh_image_add_blur')
+test_dataset = imageDataset(file_dir='dataset/DOF_dataset', type='test', test=True, images_dir='/home/joey/BAID/DOF/bokeh_image_add_blur')
 
 def parse_args():
     parser = argparse.ArgumentParser()

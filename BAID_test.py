@@ -1,6 +1,6 @@
 import os
 import scipy.stats
-from BAID_data import BBDataset
+from BAID_data import imageDataset
 from torch.utils.data import DataLoader
 from models.model import BSFN, BSFN_AVA
 import torch.nn as nn
@@ -12,13 +12,13 @@ import pandas as pd
 import scipy
 from tqdm import tqdm
 
-test_dataset = BBDataset(file_dir='dataset/BAID_dataset', type='test', test=True, images_dir='/home/joey/from_local/AIAA_2/AIAA/BAID/images')
+test_dataset = imageDataset(file_dir='dataset/BAID_dataset', type='test', test=True, images_dir='/home/joey/from_local/AIAA_2/AIAA/BAID/images')
 
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--device', type=str, default='cuda')
     parser.add_argument('--checkpoint_dir', type=str,
-                        default='/home/joey/paper/checkpoint/BAID')
+                        default='checkpoint/BAID')
     parser.add_argument('--checkpoint_name', type=str,
                         default='model_best.pth')
     parser.add_argument('--save_dir', type=str,
@@ -29,7 +29,7 @@ def parse_args():
 def test(args, test_epoch):
     device = args.device
     checkpoint_path = os.path.join(args.checkpoint_dir, 'epoch_' + str(test_epoch) + '.pth')
-    df = pd.read_csv('dataset/BAID_dataset/BAID_val.csv')
+    df = pd.read_csv('dataset/BAID_dataset/BAID_test.csv')
     predictions = []
 
     model = BSFN(num_classes=1)

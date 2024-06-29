@@ -2,14 +2,14 @@ import os
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from BAID_data import BBDataset
+from BAID_data import imageDataset
 from torch.utils.data import DataLoader
 from models.model import BSFN, BSFN_AVA
 import torch.optim as optim
 import argparse
 
 
-train_dataset = BBDataset(file_dir='dataset/BAID_dataset', type='train', test=False, images_dir='/home/joey/from_local/AIAA_2/AIAA/BAID/images')
+train_dataset = imageDataset(file_dir='dataset/BAID_dataset', type='train', test=False, images_dir='/home/joey/from_local/AIAA_2/AIAA/BAID/images')
 
 def save_checkpoint(args, model, epoch):
     checkpoint_dir = args.checkpoint_dir

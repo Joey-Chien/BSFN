@@ -2,7 +2,7 @@ import os
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from AVA_data import BBDataset
+from AVA_data import imageDataset
 from torch.utils.data import DataLoader
 from models.model import BSFN_AVA
 import torch.optim as optim
@@ -10,7 +10,7 @@ from common import *
 import argparse
 
 
-train_dataset = BBDataset(file_dir='dataset/AVA_dataset', type='train', test=False, images_dir='/local/joey/images')
+train_dataset = imageDataset(file_dir='dataset/AVA_dataset', type='train', test=False, images_dir='/local/joey/images')
 
 def parse_args():
     parser = argparse.ArgumentParser()
