@@ -13,6 +13,7 @@ Step 3. Begin training and testing.
 
 ```
 conda create --name bsfn
+source activate bsfn
 conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
 pip install pandas
 pip install scipy
