@@ -31,17 +31,19 @@ pip install torchmetrics[multimodal]
 
 2. Put the images to the right place and modify the ```images_dir``` in *_train.py and *_test.py.
 
-3. To train the DOF:
+3. To test and val the DOF:
+```
+python DOF_test.py
+```
+To perform validation, please modify DOF_test.py by setting ```type='validation'``` and updating the file read by df ```df = pd.read_csv('dataset/DOF_dataset/DOF_val.csv')```  
+
+4. To train the DOF:
 ```
 python DOF_train.py
 ```
 The default checkpoint will be saved in the checkpoint folder.
 
-4. To test and val the DOF:
-```
-python DOF_test.py
-```
-To perform validation, please modify DOF_test.py by setting ```type='validation'``` and updating the file read by df ```df = pd.read_csv('dataset/DOF_dataset/DOF_val.csv')```  
+
 
 
 ## From Scratch
