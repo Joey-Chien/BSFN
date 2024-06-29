@@ -7,9 +7,23 @@ Step 2. Place the model weights and the dataset in the correct location.
 Step 3. Begin training and testing.  
 
 ### Requirements
-* Python >= 3.8  
+* Python >= 3.9
 - Pytorch >= 1.12.0  
 * Torchvision >= 0.13.0  
+
+```
+conda create --name bsfn
+conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+pip install pandas
+pip install scipy
+pip install tqdm
+pip install opencv-python
+pip install transformers
+pip install torchmetrics
+pip install torchmetrics[multimodal]
+```
+
+
 
 ### Some Tips
 1. Before training and testing, please modify the batch size in *_train.py and *_test.py to fit your GPU memory.  
