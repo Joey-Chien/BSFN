@@ -25,7 +25,7 @@ For the reproduction, please complete the following steps:
 ## Model Weight and Dataset
 (Uploading to google cloud)  
 DOF model weight: https://drive.google.com/file/d/1ESRjAJsl0E38uW6FTQFgADqhiGDLRI7Q/view?usp=sharing  
-BAID model weight:  
+BAID model weight: https://drive.google.com/file/d/1Zzfoy1Jm8bd-TKIoAFjrSYMxm4MLQaZH/view?usp=sharing  
 AVA model weight:  
 
 BISD: https://drive.google.com/file/d/1lxumX_yQdN8n1bA1BAtisDRPK67Dx5x2/view?usp=sharing  
