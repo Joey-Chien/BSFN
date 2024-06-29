@@ -9,7 +9,7 @@ import torch.optim as optim
 import argparse
 
 
-train_dataset = BBDataset(file_dir='dataset/DOF_dataset', type='train', test=False)
+train_dataset = BBDataset(file_dir='dataset/DOF_dataset', type='train', test=False, images_dir='/home/joey/BAID/DOF/bokeh_image_add_blur')
 
 def save_checkpoint(args, model, epoch):
     checkpoint_dir = args.checkpoint_dir
@@ -25,7 +25,7 @@ def parse_args():
     parser.add_argument('--epoch', type=int, default=30)
     parser.add_argument('--batch_size', type=int, default=16)
     parser.add_argument('--checkpoint_dir', type=str,
-                        default='checkpoint/DOF/check_1')
+                        default='checkpoint/DOF/store_weight_1')
     parser.add_argument('--val_freq', type=int,
                         default=50)
     parser.add_argument('--save_freq', type=int,

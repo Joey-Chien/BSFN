@@ -13,7 +13,7 @@ import pandas as pd
 import scipy
 from tqdm import tqdm
 
-test_dataset = BBDataset(file_dir='qalign_score_dataset', type='test', test=True)
+test_dataset = BBDataset(file_dir='dataset/AVA_dataset', type='test', test=True, images_dir='/local/joey/images')
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -33,7 +33,7 @@ def test(args, test_epoch):
     df = pd.read_csv('dataset/AVA_dataset/AVA_test.csv')
     predictions = []
 
-    model = CSQ_check_26_AVA(num_classes=1)
+    model = BSFN_AVA(num_classes=1)
     model = model.to(device)
     model.load_state_dict(torch.load(checkpoint_path))
     model.eval()
@@ -77,7 +77,7 @@ if __name__ == '__main__':
     srcc = []
     prcc = []
     acc = []
-    for test_epoch in range(40):
+    for test_epoch in range(99, 100):
         print('-' * 50, 'epoch: ', test_epoch)
         temp_srcc, temp_prcc, temp_acc = test(args,test_epoch)
         srcc.append(temp_srcc)

@@ -16,7 +16,7 @@ std = [0.229, 0.224, 0.225]
 
 
 class BBDataset(Dataset):
-    def __init__(self, file_dir='dataset', type='train', test=False):
+    def __init__(self, file_dir='dataset', type='train', test=False, images_dir='/home/joey/BAID/DOF/bokeh_image_add_blur'):
         self.if_test = test
         self.train_transformer = transforms.Compose(
             [
@@ -55,7 +55,8 @@ class BBDataset(Dataset):
         for i in tqdm(range(len(pic_paths))):
             # pic_path = os.path.join('images', pic_paths[i])
             
-            pic_path = os.path.join('/home/joey/BAID/DOF/bokeh_image_add_blur', pic_paths[i])
+            # pic_path = os.path.join('/home/joey/BAID/DOF/bokeh_image_add_blur', pic_paths[i])
+            pic_path = os.path.join(images_dir, pic_paths[i])
             label = float(labels[i] / 10)
             self.pic_paths.append(pic_path)
             self.labels.append(label)

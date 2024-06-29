@@ -14,7 +14,7 @@ std = [0.229, 0.224, 0.225]
 
 
 class BBDataset(Dataset):
-    def __init__(self, file_dir='qalign_score_dataset', type='train', test=False):
+    def __init__(self, file_dir='dataset', type='train', test=False, images_dir='/local/joey/images'):
         self.if_test = test
         self.train_transformer = transforms.Compose(
             [
@@ -42,9 +42,9 @@ class BBDataset(Dataset):
         self.A_q_scores = []
 
         if type == 'train':
-            DATA = pd.read_csv(os.path.join(file_dir, 'ALL_AVA_train.csv'))
+            DATA = pd.read_csv(os.path.join(file_dir, 'AVA_train.csv'))
         elif type == 'test':
-            DATA = pd.read_csv(os.path.join(file_dir, 'ALL_AVA_test.csv'))
+            DATA = pd.read_csv(os.path.join(file_dir, 'AVA_test.csv'))
 
         labels = DATA['score'].values.tolist()
         q_scores = DATA['q_score'].values.tolist()
@@ -52,7 +52,8 @@ class BBDataset(Dataset):
         pic_paths = DATA['image'].values.tolist()
         for i in tqdm(range(len(pic_paths))):
             # pic_path = os.path.join('images', pic_paths[i])
-            pic_path = os.path.join('/local/joey/images', str(pic_paths[i]) + '.jpg')
+            # pic_path = os.path.join('/local/joey/images', str(pic_paths[i]) + '.jpg')
+            pic_path = os.path.join(images_dir, str(pic_paths[i] + '.jpg'))
             label = float(labels[i] / 10)
             self.pic_paths.append(pic_path)
             self.labels.append(label)

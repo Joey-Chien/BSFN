@@ -12,7 +12,7 @@ import pandas as pd
 import scipy
 from tqdm import tqdm
 
-test_dataset = BBDataset(file_dir='dataset/DOF_dataset', type='test', test=True)
+test_dataset = BBDataset(file_dir='dataset/DOF_dataset', type='test', test=True, images_dir='/home/joey/BAID/DOF/bokeh_image_add_blur')
 
 def parse_args():
     parser = argparse.ArgumentParser()

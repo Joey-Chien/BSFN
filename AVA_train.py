@@ -10,7 +10,7 @@ from common import *
 import argparse
 
 
-train_dataset = BBDataset(file_dir='qalign_score_dataset', type='train', test=False)
+train_dataset = BBDataset(file_dir='dataset/AVA_dataset', type='train', test=False, images_dir='/local/joey/images')
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -19,7 +19,7 @@ def parse_args():
     parser.add_argument('--epoch', type=int, default=50)
     parser.add_argument('--batch_size', type=int, default=16)
     parser.add_argument('--checkpoint_dir', type=str,
-                        default='checkpoint/AVA_check_1')
+                        default='checkpoint/store_weight_1')
     parser.add_argument('--val_freq', type=int,
                         default=100)
     parser.add_argument('--save_freq', type=int,

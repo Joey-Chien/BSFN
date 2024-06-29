@@ -12,13 +12,13 @@ import pandas as pd
 import scipy
 from tqdm import tqdm
 
-test_dataset = BBDataset(file_dir='dataset/BAID_dataset', type='validation', test=True)
+test_dataset = BBDataset(file_dir='dataset/BAID_dataset', type='test', test=True, images_dir='/home/joey/from_local/AIAA_2/AIAA/BAID/images')
 
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--device', type=str, default='cuda')
     parser.add_argument('--checkpoint_dir', type=str,
-                        default='checkpoint/BAID')
+                        default='/home/joey/paper/checkpoint/BAID')
     parser.add_argument('--checkpoint_name', type=str,
                         default='model_best.pth')
     parser.add_argument('--save_dir', type=str,
