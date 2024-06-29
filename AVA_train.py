@@ -6,7 +6,6 @@ from AVA_data import imageDataset
 from torch.utils.data import DataLoader
 from models.model import BSFN_AVA
 import torch.optim as optim
-from common import *
 import argparse
 
 

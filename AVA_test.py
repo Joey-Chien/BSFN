@@ -18,7 +18,7 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--device', type=str, default='cuda')
     parser.add_argument('--checkpoint_dir', type=str,
-                        default='/home/joey/paper/checkpoint/AVA')
+                        default='checkpoint/AVA')
     parser.add_argument('--checkpoint_name', type=str,
                         default='model_best.pth')
     parser.add_argument('--save_dir', type=str,
