@@ -12,7 +12,7 @@ import pandas as pd
 import scipy
 from tqdm import tqdm
 
-test_dataset = imageDataset(file_dir='dataset/BAID_dataset', type='test', test=True, images_dir='/home/joey/from_local/AIAA_2/AIAA/BAID/images')
+test_dataset = imageDataset(file_dir='dataset/BAID_dataset', type='test', test=True, images_dir='your dataset folder')
 
 def parse_args():
     parser = argparse.ArgumentParser()

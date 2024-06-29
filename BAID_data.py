@@ -16,7 +16,7 @@ std = [0.229, 0.224, 0.225]
 
 
 class imageDataset(Dataset):
-    def __init__(self, file_dir='dataset', type='train', test=False, images_dir='/home/joey/from_local/AIAA_2/AIAA/BAID/images'):
+    def __init__(self, file_dir='dataset', type='train', test=False, images_dir='your dataset folder'):
         self.if_test = test
         self.train_transformer = transforms.Compose(
             [

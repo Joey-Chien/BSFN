@@ -9,7 +9,7 @@ import torch.optim as optim
 import argparse
 
 
-train_dataset = imageDataset(file_dir='dataset/BAID_dataset', type='train', test=False, images_dir='/home/joey/from_local/AIAA_2/AIAA/BAID/images')
+train_dataset = imageDataset(file_dir='dataset/BAID_dataset', type='train', test=False, images_dir='your dataset folder')
 
 def save_checkpoint(args, model, epoch):
     checkpoint_dir = args.checkpoint_dir
