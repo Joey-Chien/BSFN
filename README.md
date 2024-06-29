@@ -3,7 +3,7 @@
 ## Quick Start
 
 Step 1. Download the model weights and the dataset that you want to try.  
-Step 2. Place the model weights and the dataset in the correct location..  
+Step 2. Place the model weights and the dataset in the correct location.  
 Step 3. Begin training and testing.  
 
 ### Requirements
@@ -14,13 +14,15 @@ Step 3. Begin training and testing.
 ### Some Tips
 1. Before training and testing, please modify the batch size in *_train.py and *_test.py to fit your GPU memory.  
 
-2. To train the DOF:
+2. Put the images to the right place and modify the ```images_dir``` in *_train.py and *_test.py.
+
+3. To train the DOF:
 ```
 python DOF_train.py
 ```
 The default checkpoint will be saved in the checkpoint folder.
 
-3. To test and val the DOF:
+4. To test and val the DOF:
 ```
 python DOF_test.py
 ```

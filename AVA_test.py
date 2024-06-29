@@ -2,11 +2,10 @@ import os
 import scipy.stats
 from AVA_data import BBDataset
 from torch.utils.data import DataLoader
-from models.model import SAAN, QALIGN_1, QALIGN_2, QALIGN_3, QALIGN_4, QALIGN_5, CSQ_check_26, CSQ_check_26_AVA, CSQ_check_26_AVA_2
+from models.model import BSFN_AVA
 import torch.nn as nn
 import torch
 import torch.optim as optim
-from common import *
 import argparse
 import torch.nn.functional as F
 import pandas as pd
@@ -19,7 +18,7 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--device', type=str, default='cuda')
     parser.add_argument('--checkpoint_dir', type=str,
-                        default='checkpoint/AVA')
+                        default='/home/joey/paper/checkpoint/AVA')
     parser.add_argument('--checkpoint_name', type=str,
                         default='model_best.pth')
     parser.add_argument('--save_dir', type=str,

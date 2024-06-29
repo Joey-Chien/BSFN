@@ -2,7 +2,6 @@ import torch
 import torch.nn as nn
 from torch.utils.data import Dataset
 import torchvision.transforms as transforms
-from common import *
 import cv2 as cv
 import time
 import os
@@ -53,7 +52,7 @@ class BBDataset(Dataset):
         for i in tqdm(range(len(pic_paths))):
             # pic_path = os.path.join('images', pic_paths[i])
             # pic_path = os.path.join('/local/joey/images', str(pic_paths[i]) + '.jpg')
-            pic_path = os.path.join(images_dir, str(pic_paths[i] + '.jpg'))
+            pic_path = os.path.join(images_dir, str(pic_paths[i]) + '.jpg')
             label = float(labels[i] / 10)
             self.pic_paths.append(pic_path)
             self.labels.append(label)

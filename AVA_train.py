@@ -4,7 +4,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from AVA_data import BBDataset
 from torch.utils.data import DataLoader
-from models.model import SAAN, QALIGN_1, QALIGN_2, QALIGN_3, QALIGN_4, QALIGN_5, CSQ_check_26_AVA
+from models.model import BSFN_AVA
 import torch.optim as optim
 from common import *
 import argparse
