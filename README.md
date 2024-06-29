@@ -3,7 +3,7 @@
 ## Quick Start
 
 Step 1. Download the model weights and the dataset that you want to try.  
-Step 2. Place the model weights and the dataset in the correct location. (model weights->checkpoint/DOF)
+Step 2. Place the model weights and the dataset in the correct location. (model weights->checkpoint/DOF, dataset->to fit with images_dir)  
 Step 3. Begin training and testing.  
 
 ### Requirements
